@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "qui"
 name = "Qui"
-description.en = "qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers"
-description.fr = ""
+description.en = "qBittorrent web UI"
+description.fr = "Interface utilisateur Web qBittorrent"
 
 version = "1.13.1~ynh1"
 
@@ -14,9 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "GPL-2.0"
 website = "https://getqui.com/"
-demo = "https://demo.example.com"
 admindoc = "https://getqui.com/docs/intro"
-userdoc = "https://yunohost.org/apps"
 code = "https://github.com/autobrr/qui"
 
 [integration]
