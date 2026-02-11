@@ -1,0 +1,67 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "qui"
+name = "Qui"
+description.en = "qBittorrent web UI: manage multiple instances, automate torrent workflows, and cross-seed across trackers"
+description.fr = ""
+
+version = "1.13.1~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "GPL-2.0"
+website = "https://getqui.com/"
+demo = "https://demo.example.com"
+admindoc = "https://getqui.com/docs/intro"
+userdoc = "https://yunohost.org/apps"
+code = "https://github.com/autobrr/qui"
+
+[integration]
+yunohost = ">= 12.1.38"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/qui"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+     in_subdir = false
+    url = "https://github.com/autobrr/qui/releases/download/v1.13.1/qui_1.13.1_linux_x86_64.tar.gz"
+    sha256 = "231de1865f46ce3cee3c2909401c3fb302077d8c8ffed27cd7e2d48e039d152e"
+
+    autoupdate.strategy = "latest_github_release"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]

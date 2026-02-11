@@ -1,0 +1,1 @@
+A fast, modern web interface for qBittorrent. Supports managing multiple qBittorrent instances from a single, lightweight application.
