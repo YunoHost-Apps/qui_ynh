@@ -21,9 +21,9 @@ chmod +x "$install_dir/qui"
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
-ynh_script_progression "Adding $app's configuration files..."
+#ynh_script_progression "Adding $app's configuration files..."
 
-ynh_config_add --template=".env" --destination="$install_dir/.env"
+#ynh_config_add --template="config.toml" --destination="$install_dir/config.toml"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -46,9 +46,9 @@ ynh_config_add_logrotate
 #=================================================
 ynh_script_progression "Creat first user..."
 
-pushd "$install_dir"
- 	ynh_hide_warnings ./qui create-user --username $admin --password $password
-popd
+#pushd "$install_dir"
+# 	ynh_hide_warnings ./qui create-user --config-dir $install_dir --username $admin --password $password
+#popd
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -57,6 +57,8 @@ ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
 ynh_systemctl --service="$app" --action="start"
+
+ynh_config_add --template="config.toml" --destination="$install_dir/config.toml"
 
 #=================================================
 # END OF SCRIPT
