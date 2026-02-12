@@ -21,9 +21,9 @@ chmod +x "$install_dir/qui"
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
-ynh_script_progression "Adding $app's configuration files..."
+#ynh_script_progression "Adding $app's configuration files..."
 
-ynh_config_add --template="config.toml" --destination="$install_dir/config.toml"
+#ynh_config_add --template="config.toml" --destination="$install_dir/config.toml"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -57,6 +57,8 @@ ynh_script_progression "Starting $app's systemd service..."
 
 # Start a systemd service
 ynh_systemctl --service="$app" --action="start"
+
+ynh_config_add --template="config.toml" --destination="$install_dir/config.toml"
 
 #=================================================
 # END OF SCRIPT
