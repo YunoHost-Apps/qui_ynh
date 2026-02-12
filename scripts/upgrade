@@ -27,7 +27,7 @@ chmod +x "$install_dir/qui"
 #=================================================
 #ynh_script_progression "Updating $app's configuration files..."
 
-#ynh_config_add --template="config.toml" --destination="$install_dir/.config/qui/config.toml"
+#ynh_config_add --template="config.toml" --destination="$data_dir/config.toml"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION
