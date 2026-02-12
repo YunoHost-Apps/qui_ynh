@@ -26,7 +26,7 @@ logPath = "/var/log/__APP__/__APP__.log"
 
 # Data directory (default: next to config file)
 # Database file (qui.db) will be created inside this directory
-dataDir = "__DATA_DIR__"
+#dataDir = ""
 
 # Check for new releases via api.autobrr.com
 # Default: true
