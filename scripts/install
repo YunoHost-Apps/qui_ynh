@@ -46,9 +46,9 @@ ynh_config_add_logrotate
 #=================================================
 ynh_script_progression "Creat first user..."
 
-pushd "$install_dir"
- 	ynh_hide_warnings ./qui create-user --config-dir $install_dir --username $admin --password $password
-popd
+#pushd "$install_dir"
+# 	ynh_hide_warnings ./qui create-user --config-dir $install_dir --username $admin --password $password
+#popd
 
 #=================================================
 # START SYSTEMD SERVICE
