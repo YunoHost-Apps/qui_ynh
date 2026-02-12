@@ -10,7 +10,7 @@ port = __PORT__
 # Set custom baseUrl eg /qui/ to serve in subdirectory.
 # Not needed for subdomain, or by accessing with :port directly.
 # Optional
-#baseUrl = "/qui/"
+baseUrl = "__PATH__/"
 
 # Session secret
 # Auto-generated if not provided

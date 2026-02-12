@@ -42,6 +42,15 @@ yunohost service add "$app" --description="qBittorrent web UI" --log="/var/log/$
 ynh_config_add_logrotate
 
 #=================================================
+# FIRST USER
+#=================================================
+ynh_script_progression "Creat first user..."
+
+pushd "$install_dir"
+ 	ynh_hide_warnings ./qui create-user --username $admin --password $password
+popd
+
+#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
