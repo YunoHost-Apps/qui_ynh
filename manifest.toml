@@ -7,7 +7,7 @@ name = "Qui"
 description.en = "qBittorrent web UI"
 description.fr = "Interface utilisateur Web qBittorrent"
 
-version = "1.32.0~ynh1"
+version = "1.33.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -44,12 +44,12 @@ ram.runtime = "50M"
 
     [resources.sources.main]
      in_subdir = false
-    amd64.url = "https://github.com/autobrr/qui/releases/download/v1.32.0/qui_1.32.0_linux_x86_64.tar.gz"
-    amd64.sha256 = "acead415955af1387e8939392cca3978799c01022904858a2156d8c3f7fcbf93"
-    arm64.url = "https://github.com/autobrr/qui/releases/download/v1.32.0/qui_1.32.0_linux_arm64.tar.gz"
-    arm64.sha256 = "c5cf6a3747d5803f6699e5d84b993325ebcfca1d1df214c50764be2d90d5454d"
-    armhf.url = "https://github.com/autobrr/qui/releases/download/v1.32.0/qui_1.32.0_linux_x86_64.tar.gz"
-    armhf.sha256 = "acead415955af1387e8939392cca3978799c01022904858a2156d8c3f7fcbf93"
+    amd64.url = "https://github.com/autobrr/qui/releases/download/v1.33.0/qui_1.33.0_linux_x86_64.tar.gz"
+    amd64.sha256 = "f9e1fdfa9b1828ad979a9a9f3a52ff11e713b5b28e41b28a920849a6e7dd41de"
+    arm64.url = "https://github.com/autobrr/qui/releases/download/v1.33.0/qui_1.33.0_linux_arm64.tar.gz"
+    arm64.sha256 = "4475e725d2af0c7c28ebc83f7a1f3adcea5035143d1d7087ec1fb5155ab75f0a"
+    armhf.url = "https://github.com/autobrr/qui/releases/download/v1.33.0/qui_1.33.0_linux_x86_64.tar.gz"
+    armhf.sha256 = "f9e1fdfa9b1828ad979a9a9f3a52ff11e713b5b28e41b28a920849a6e7dd41de"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*_linux_x86_64.tar.gz"
